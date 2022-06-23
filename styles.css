@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+:root {
+  /* Primary */
+
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+
+  /* Font */
+  --poppings: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--Very-Light-Gray);
+  display: grid;
+  place-items: center;
+  /* outline: 1px solid red; */
+  min-height: 100%;
+  position: relative;
+  font-family: var(--poppings);
+}
+
+.container {
+  margin: 5rem 0;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h1:first-child {
+  color: var(--Grayish-Blue);
+  font-weight: 200;
+  font-size: 2.5rem;
+}
+
+.title h1:nth-child(2) {
+  font-size: 2.5rem;
+  color: var(--Very-Dark-Blue);
+}
+
+.title p {
+  font-size: 1.7rem;
+  padding: 0 2rem;
+  color: var(--Grayish-Blue);
+}
+
+.grid__container {
+  margin-top: 4rem;
+  /* outline: 1px solid blue; */
+}
+
+.card {
+  width: 32rem;
+  height: 22rem;
+  /* outline: 1px solid red; */
+  margin: auto;
+  display: grid;
+  place-items: center;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 4px 14px 18px 5px rgba(76, 78, 97, 0.14);
+}
+
+.card__1 {
+  border-top: 3px solid var(--Cyan);
+}
+
+.card__2 {
+  border-top: 3px solid var(--Red);
+}
+
+.card__3 {
+  border-top: 3px solid var(--Orange);
+}
+
+.card__4 {
+  border-top: 3px solid var(--Blue);
+}
+
+.card h2 {
+  font-size: 2.5rem;
+  color: var(--Very-Dark-Blue);
+}
+
+.card p {
+  font-size: 1.5rem;
+  color: var(--Grayish-Blue);
+}
+
+.card img {
+  /* outline: 1px solid; */
+  margin-top: 3.7rem;
+  margin-left: 20.6rem;
+}
+
+.card__element {
+  /* outline: 1px solid green; */
+  width: 85%;
+  height: 85%;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  /* outline: 1px solid red; */
+}
+
+@media (min-width: 768px) {
+
+
+  .title p {
+    width: 65%;
+    margin: auto;
+  }
+  
+  .grid__container {
+  display: grid;
+  grid-template-columns: [col-start] 1fr [col-two] 1fr [col-three] 1fr [col-end];
+  grid-template-rows: repeat(4, 14.5rem);
+  grid-column-gap: 2rem;
+}
+
+
+.card__1 {
+  grid-row-start: 2;
+}
+
+.card__2 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+.card__4 {
+  grid-row-start: 2;
+  grid-column-start: 3;
+}
+
+.card__3 {
+  grid-row-start: 3;
+  grid-column-start: 2;
+  margin-top: -3rem;
+}
+
+}
